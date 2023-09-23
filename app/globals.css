@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading-h2 {
+  @apply font-display text-neutral-950 text-3xl md:text-4xl lg:text-[40px] font-bold capitalize leading-[119%];
+}
+
+.body-text {
+  @apply font-body text-neutral-900 text-base font-normal leading-[169%];
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
