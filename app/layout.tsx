@@ -1,3 +1,4 @@
+import PageTransitionWrapper from "../components/ui/PageTransitionWrapper";
 import FloatingNav from "../components/ui/FloatingNav";
 import { SmoothScrollWrapper } from "../components/ui/SmoothScrollWrapper";
 import { NavProvider } from "../contexts/NavContext";
@@ -21,14 +22,16 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg" sizes="any" />
       </head>
       <body className="bg-primary-100">
-        <NavProvider>
-          <SmoothScrollWrapper>
+        <SmoothScrollWrapper>
+          <NavProvider>
             {/* <div className="relative"> */}
-            {children}
+            {/* <PageTransitionWrapper>{children}</PageTransitionWrapper> */}
+            <PageTransitionWrapper>{children}</PageTransitionWrapper>
+            {/* {children} */}
             <FloatingNav />
             {/* </div> */}
-          </SmoothScrollWrapper>
-        </NavProvider>
+          </NavProvider>
+        </SmoothScrollWrapper>
       </body>
     </html>
   );

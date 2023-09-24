@@ -23,14 +23,14 @@ export default function HeroContent() {
         <Button
           variant="link"
           className="w-48 bg-white text-neutral-900 font-medium"
-          to="men"
+          to="shop"
         >
           Shop men
         </Button>
         <Button
           variant="link"
           className="w-48 bg-white text-neutral-900 font-medium"
-          to="women"
+          to="shop"
         >
           Shop women
         </Button>

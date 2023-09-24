@@ -77,8 +77,8 @@ export default function FloatingNav() {
                 />
               </Link>
               <ul className="font-medium p-1 flex bg-[#194759]/10 rounded-2xl overflow-hidden">
-                <FloatingNavLink to="/men">Men</FloatingNavLink>
-                <FloatingNavLink to="/women">Women</FloatingNavLink>
+                <FloatingNavLink to="/shop">Men</FloatingNavLink>
+                <FloatingNavLink to="/shop">Women</FloatingNavLink>
                 <FloatingNavLink to="/sustainability">
                   Sustainability
                 </FloatingNavLink>

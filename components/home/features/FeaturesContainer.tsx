@@ -53,7 +53,7 @@ function FeaturesContainer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5 }}
             className="space-y-4 max-w-lg"
           >
             <h3 className="font-display text-2xl lg:text-[32px] font-semibold leading-[124%] text-neutral-950">
@@ -81,6 +81,7 @@ function FeaturesContainer() {
             </>
           ))} */}
         </div>
+        {/* </motion.div> */}
       </AnimatePresence>
       <div className="absolute hidden md:block left-0 bottom-0 w-[60%] h-[40%] md:w-[40%] md:h-[65%] -translate-x-[30%] translate-y-[25%] rotate-180 -z-10">
         <Image
