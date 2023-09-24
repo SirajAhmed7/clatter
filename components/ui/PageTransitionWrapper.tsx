@@ -19,17 +19,17 @@ function PageTransitionWrapper({ children }: { children: React.ReactNode }) {
             initialState: {
               opacity: 0,
               position: "absolute",
-              // clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+              clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
             },
             animateState: {
               opacity: 1,
               position: "unset",
-              // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             },
             exitState: {
               opacity: 0,
               position: "absolute",
-              // clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+              clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
             },
           }}
           className="w-full"
