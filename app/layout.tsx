@@ -1,4 +1,4 @@
-import PageTransitionWrapper from "../components/ui/PageTransitionWrapper";
+// import PageTransitionWrapper from "../components/ui/PageTransitionWrapper";
 import FloatingNav from "../components/ui/FloatingNav";
 import { SmoothScrollWrapper } from "../components/ui/SmoothScrollWrapper";
 import { NavProvider } from "../contexts/NavContext";
@@ -26,8 +26,8 @@ export default function RootLayout({
           <NavProvider>
             {/* <div className="relative"> */}
             {/* <PageTransitionWrapper>{children}</PageTransitionWrapper> */}
-            <PageTransitionWrapper>{children}</PageTransitionWrapper>
-            {/* {children} */}
+            {/* {/* <PageTransitionWrapper>{children}</PageTransitionWrapper> */}
+            {children}
             <FloatingNav />
             {/* </div> */}
           </NavProvider>
