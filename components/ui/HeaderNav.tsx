@@ -1,6 +1,6 @@
 "use client";
 
-import { useNav } from "../../../contexts/NavContext";
+import { useNav } from "../../contexts/NavContext";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHeaderNavLink from "./HomeHeaderNavLink";
@@ -27,7 +27,7 @@ export default function HeaderNav() {
         <HomeHeaderNavLink to="/men">Men</HomeHeaderNavLink>
         <HomeHeaderNavLink to="/women">Women</HomeHeaderNavLink>
         <HomeHeaderNavLink to="/sustainability">
-          sustainability
+          Sustainability
         </HomeHeaderNavLink>
         <HomeHeaderNavLink to="/cart">Cart</HomeHeaderNavLink>
       </ul>

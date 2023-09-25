@@ -1,4 +1,4 @@
-import HeaderNav from "./HeaderNav";
+import HeaderNav from "../../ui/HeaderNav";
 import HeroBgVideo from "./HeroBgVideo";
 import HeroContent from "./HeroContent";
 // import dynamic from "next/dynamic";

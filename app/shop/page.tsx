@@ -1,13 +1,9 @@
-import Link from "next/link";
+import ShopHeader from "../../components/shop/shopHeader/ShopHeader";
 
 function ShopPage() {
   return (
     <>
-      <h1 className="text-9xl font-body">
-        <Link scroll={false} href={"/"}>
-          shop
-        </Link>
-      </h1>
+      <ShopHeader />
     </>
   );
 }
