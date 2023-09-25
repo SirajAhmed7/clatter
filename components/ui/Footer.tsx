@@ -4,7 +4,8 @@ import { PiFacebookLogo, PiInstagramLogo, PiTiktokLogo } from "react-icons/pi";
 
 function Footer() {
   return (
-    <footer className="relative px-4 py-32 w-full overflow-hidden">
+    <footer className="relative px-4 py-32 w-full overflow-hidden border-t border-t-neutral-100">
+      {/* // <footer className="relative px-4 py-32 w-full overflow-hidden bg-primary-50 border-t"> */}
       <div className="grid grid-cols-2 md:grid-cols-6 gap-5 gap-y-16 justify-items-center lg:justify-items-start items-start">
         <div className="relative col-span-2 md:col-span-4 w-full min-h-[96px] md:min-h-[192px] lg:h-full max-h-48">
           {/* <div className="relative col-span-3 h-48 h-full"> */}

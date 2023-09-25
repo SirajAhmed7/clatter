@@ -6,11 +6,13 @@ import {
   motion,
   useMotionValueEvent,
 } from "framer-motion";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 function ShopHeaderImage() {
   const bgRef = useRef<HTMLDivElement>(null);
   const filtersRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress: bgScroll } = useScroll({
     target: bgRef,
     offset: ["center start", "end start"],
@@ -19,6 +21,7 @@ function ShopHeaderImage() {
     target: filtersRef,
     offset: ["start start", "end start"],
   });
+
   const [filterTop, setFilterTop] = useState(false);
 
   const opac = useTransform(bgScroll, [0, 0.85], [1, 0]);
@@ -49,16 +52,29 @@ function ShopHeaderImage() {
 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         ref={bgRef}
         style={{ opacity: opac }}
         className="bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.09)_12.81%,rgba(0,0,0,0.06)_16.46%,rgba(0,0,0,0.00)_52.4%,rgba(0,0,0,0.06)_77.4%,rgba(0,0,0,0.14)_90.42%,rgba(0,0,0,0.17)_100%),url('/shopHero.webp')] bg-cover bg-center absolute top-0 left-0 h-full w-full -z-10"
-      ></motion.div>
+      ></motion.div> */}
+      <motion.div
+        ref={bgRef}
+        style={{ opacity: opac }}
+        className="absolute top-0 left-0 h-full w-full -z-10"
+      >
+        <Image
+          src={"/shopHero.webp"}
+          fill
+          className="object-cover"
+          alt="Shop header"
+        />
+        <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.09)_12.81%,rgba(0,0,0,0.06)_16.46%,rgba(0,0,0,0.00)_52.4%,rgba(0,0,0,0.06)_77.4%,rgba(0,0,0,0.14)_90.42%,rgba(0,0,0,0.17)_100%)]"></div>
+      </motion.div>
       <motion.div
         ref={filtersRef}
         style={{ color: filtersColor }}
         className={`${
-          !filterTop ? "absolute bottom-0" : "fixed top-0 px-4"
+          !filterTop ? "absolute bottom-0" : "fixed top-0 px-4 z-[25]"
         } left-0 w-full`}
       >
         <div

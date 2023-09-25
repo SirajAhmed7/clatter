@@ -22,4 +22,5 @@ export interface Shoe {
   img3?: string;
   sizes?: string[];
   trueToFit?: number;
+  type: "men" | "women" | "all";
 }
