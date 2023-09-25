@@ -1,7 +1,5 @@
-// function ShopFilters() {
-//   return (
+function ShopFilters() {
+  return <></>;
+}
 
-//   );
-// }
-
-// export default ShopFilters;
+export default ShopFilters;
