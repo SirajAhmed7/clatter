@@ -21,7 +21,9 @@ function ShopHeaderImage() {
   });
   const [filterTop, setFilterTop] = useState(false);
 
-  const opac = useTransform(bgScroll, [0, 1], [1, 0]);
+  const opac = useTransform(bgScroll, [0, 0.85], [1, 0]);
+
+  const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#0D1F2A"]);
 
   const bgHeight = bgRef.current
     ? bgRef.current.getBoundingClientRect().height / 2
@@ -35,12 +37,6 @@ function ShopHeaderImage() {
     if (y > 0) {
       setFilterTop(true);
     }
-
-    // const filterHeightPercent = filterH / bgHeight;
-
-    // if (opac > filterHeightPercent) {
-    //   setFilterTop(false);
-    // }
   });
 
   useMotionValueEvent(bgScroll, "change", (y) => {
@@ -50,8 +46,6 @@ function ShopHeaderImage() {
       setFilterTop(false);
     }
   });
-
-  const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#0D1F2A"]);
 
   return (
     <>
@@ -70,6 +64,7 @@ function ShopHeaderImage() {
         <div
           className={`${
             !filterTop ? "" : "bg-neutral-500/10 backdrop-blur-[20px]"
+            // !filterTop ? "" : "backdrop-blur-[20px]"
           } w-full py-4 rounded-b-[48px]`}
         >
           <h2 className="text-center text-3xl font-display">Filters</h2>
