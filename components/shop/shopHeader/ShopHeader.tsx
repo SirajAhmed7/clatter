@@ -1,5 +1,4 @@
 import HeaderNav from "../../ui/HeaderNav";
-import ShopFilters from "./ShopFilters";
 import ShopHeaderImage from "./ShopHeaderImage";
 
 function ShopHeader() {
