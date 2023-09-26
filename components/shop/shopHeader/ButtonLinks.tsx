@@ -16,6 +16,7 @@ function ButtonLinks() {
             ? "bg-current"
             : "bg-transparent border border-current text-current p-3"
         }`}
+        scroll={false}
       >
         <span
           className={`${
@@ -35,6 +36,7 @@ function ButtonLinks() {
             ? "bg-current"
             : "bg-transparent border border-current text-current p-3"
         }`}
+        scroll={false}
       >
         <span
           className={`${

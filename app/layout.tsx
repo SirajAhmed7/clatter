@@ -1,4 +1,5 @@
 // import PageTransitionWrapper from "../components/ui/PageTransitionWrapper";
+import { Analytics } from "@vercel/analytics/react";
 import FloatingNav from "../components/ui/FloatingNav";
 import { SmoothScrollWrapper } from "../components/ui/SmoothScrollWrapper";
 import { NavProvider } from "../contexts/NavContext";
@@ -32,6 +33,7 @@ export default function RootLayout({
             {/* </div> */}
           </NavProvider>
         </SmoothScrollWrapper>
+        <Analytics />
       </body>
     </html>
   );

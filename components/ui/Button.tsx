@@ -8,6 +8,7 @@ type Props = {
   variant?: "primary" | "secondary" | "white" | "outline" | "free" | "link";
   size?: string;
   to?: string;
+  scroll?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
 };
@@ -19,6 +20,7 @@ export default function Button({
   size,
   to,
   onClick,
+  scroll = true,
   children,
 }: Props) {
   type variantsType = {
@@ -40,6 +42,7 @@ export default function Button({
           className ? className : ""
         }  ${size ? size : ""}`}
         href={`/${to!}`}
+        scroll={scroll}
       >
         {children}
       </Link>
