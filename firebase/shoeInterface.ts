@@ -1,7 +1,7 @@
 import { DocumentReference } from "firebase/firestore";
 
 interface Colors {
-  color: string;
+  colorCode: string;
   name: string;
   id: DocumentReference;
 }
@@ -12,8 +12,10 @@ export interface Shoe {
   sliderImg: string;
   thumbnailImg: string;
   launched: boolean;
+  color: { colorCode: string; name: string };
+  type: "men" | "women" | "all";
   id?: string;
-  colors?: Colors[];
+  allColors?: Colors[];
   qty?: number;
   description?: string;
   materials?: { name: string; description: string }[];
@@ -22,5 +24,4 @@ export interface Shoe {
   img3?: string;
   sizes?: string[];
   trueToFit?: number;
-  type: "men" | "women" | "all";
 }

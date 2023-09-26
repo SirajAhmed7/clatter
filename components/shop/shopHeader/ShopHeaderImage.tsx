@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import ShopFilters from "./ShopFilters";
 
 function ShopHeaderImage() {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -26,7 +27,8 @@ function ShopHeaderImage() {
 
   const opac = useTransform(bgScroll, [0, 0.85], [1, 0]);
 
-  const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#0D1F2A"]);
+  // const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#0D1F2A"]);
+  const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#22343D"]);
 
   // TODO: try putting height calculations in useMotionValueEvent
   const bgHeight = bgRef.current
@@ -82,10 +84,11 @@ function ShopHeaderImage() {
           className={`${
             !filterTop ? "" : "bg-neutral-500/[0.05] backdrop-blur-[20px]"
             // !filterTop ? "" : "backdrop-blur-[20px]"
-          } w-full py-4 rounded-b-[48px]`}
+          } w-full rounded-b-[48px]`}
         >
           {/* TODO: Add filters components */}
-          <h2 className="text-center text-3xl font-display">Filters</h2>
+          {/* <h2 className="text-center text-3xl font-display">Filters</h2> */}
+          <ShopFilters />
         </div>
       </motion.div>
     </>

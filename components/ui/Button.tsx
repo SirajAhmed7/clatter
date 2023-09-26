@@ -36,7 +36,7 @@ export default function Button({
   if (variant === "link")
     return (
       <Link
-        className={`font-display max-w-full flex justify-center items-center p-4 rounded-2xl text-base sm:text-lg ${
+        className={`font-display max-w-full flex justify-center items-center rounded-2xl text-base sm:text-lg ${
           className ? className : ""
         }  ${size ? size : ""}`}
         href={`/${to!}`}

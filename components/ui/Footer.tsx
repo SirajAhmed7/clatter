@@ -9,12 +9,14 @@ function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-6 gap-5 gap-y-16 justify-items-center lg:justify-items-start items-start">
         <div className="relative col-span-2 md:col-span-4 w-full min-h-[96px] md:min-h-[192px] lg:h-full max-h-48">
           {/* <div className="relative col-span-3 h-48 h-full"> */}
-          <Image
-            src={"/clatterLogoBig.svg"}
-            fill
-            className="absolute top-0 left-0 w-full h-full object-contain"
-            alt="Clatter logo"
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/clatterLogoBig.svg"}
+              fill
+              className="absolute top-0 left-0 w-full h-full object-contain"
+              alt="Clatter logo"
+            />
+          </Link>
         </div>
         {/* <div className="flex flex-col gap-3 col-start-5"> */}
         <div className="flex flex-col gap-3 text-base">
@@ -22,13 +24,13 @@ function Footer() {
             Shop
           </h5>
           <Link
-            href={"/men"}
+            href={"/shop/men"}
             className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
           >
             Men
           </Link>
           <Link
-            href={"/women"}
+            href={"/shop/women"}
             className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
           >
             Women

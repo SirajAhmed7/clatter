@@ -83,7 +83,7 @@ function Shop() {
         className="relative w-full aspect-square"
         onMouseEnter={() => setLeft(true)}
       >
-        <Link href={"/men"}>
+        <Link href={"/shop/men"}>
           <Image
             src={"/shopMen.jpg"}
             fill
@@ -97,7 +97,7 @@ function Shop() {
         className="relative w-full aspect-square"
         onMouseEnter={() => setLeft(false)}
       >
-        <Link href={"/women"}>
+        <Link href={"/shop/women"}>
           <Image
             src={"/shopWomen.webp"}
             fill

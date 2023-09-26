@@ -1,8 +1,11 @@
-import { getAllShoes } from "../../../firebase/getAllShoes";
+import { Shoe } from "../../../firebase/shoeInterface";
 import Card from "../../ui/Card";
 
-async function AllShoes() {
-  const shoes = await getAllShoes();
+type Props = {
+  shoes: Shoe[];
+};
+
+function AllShoes({ shoes }: Props) {
   return (
     <section className="px-4 mb-32">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">

@@ -63,7 +63,7 @@ export default function FloatingNav() {
               ExitState: { y: 90 },
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`fixed text-neutral-900 bottom-4 lg:bottom-10 md:px-4 w-[41rem] left-1/2 font-display z-50 max-w-[92vw] mx-auto bg-primary-50/[50%] rounded-2xl backdrop-blur-xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.10)]`}
+            className={`fixed text-neutral-900 bottom-4 lg:bottom-10 md:px-4 w-[41rem] left-1/2 font-display z-50 max-w-[92vw] mx-auto bg-primary-50/[40%] rounded-2xl backdrop-blur-xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.10)]`}
             // className={`fixed text-neutral-900 bottom-5 lg:bottom-10 md:px-4 w-[41rem] left-1/2 ml-[-37.5%] font-display z-50 max-w-[92vw] mx-auto bg-primary-50/[50%] rounded-2xl backdrop-blur-xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.10)]`}
           >
             {/* PC / LAPTOP */}

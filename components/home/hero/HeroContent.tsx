@@ -22,15 +22,15 @@ export default function HeroContent() {
       <div className="flex gap-6">
         <Button
           variant="link"
-          className="w-48 bg-white text-neutral-900 font-medium"
-          to="shop"
+          className="w-48 bg-white text-neutral-900 font-medium py-4"
+          to="shop/men"
         >
           Shop men
         </Button>
         <Button
           variant="link"
-          className="w-48 bg-white text-neutral-900 font-medium"
-          to="shop"
+          className="w-48 bg-white text-neutral-900 font-medium py-4"
+          to="shop/women"
         >
           Shop women
         </Button>
