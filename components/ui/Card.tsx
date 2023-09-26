@@ -12,7 +12,7 @@ type Props = {
 function Card({ name, price, thumbnailImg, small, className = "" }: Props) {
   return (
     <div
-      className={`relative font-body text-base md:text-lg text-neutral-950 bg-white rounded-[32px] ${
+      className={`relative font-body text-base md:text-lg text-neutral-950 bg-white rounded-[36px] ${
         small
           ? "min-h-[200px] md:min-h-[296px]"
           : "min-h-[256px] md:min-h-[296px]"

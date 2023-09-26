@@ -1,22 +1,30 @@
-import { PiCaretDownBold } from "react-icons/pi";
 import ButtonLinks from "./ButtonLinks";
+import DropDown from "../../ui/DropDown";
 
 function ShopFilters() {
   return (
     <div className="flex justify-between items-center py-2 px-9">
-      <button className="flex gap-2 text-xl items-end font-medium">
+      {/* <button className="flex gap-2 text-xl items-center font-medium px-5 py-2 rounded-xl hover:bg-neutral-300/30">
         Filter
         <span>
           <PiCaretDownBold />
         </span>
-      </button>
+      </button> */}
+      <DropDown windowKey="filter">
+        <DropDown.Button>Filter</DropDown.Button>
+        <DropDown.Window>
+          <div></div>
+        </DropDown.Window>
+      </DropDown>
+
       <ButtonLinks />
-      <button className="flex gap-2 text-xl items-end font-medium">
-        Sort
-        <span>
-          <PiCaretDownBold />
-        </span>
-      </button>
+
+      <DropDown xPos="right" windowKey="sort">
+        <DropDown.Button>Sort</DropDown.Button>
+        <DropDown.Window>
+          <div></div>
+        </DropDown.Window>
+      </DropDown>
     </div>
   );
 }

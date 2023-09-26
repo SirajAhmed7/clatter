@@ -22,7 +22,7 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        current: "currentColor",
+        // current: "currentColor",
         white: "#ffffff",
         primary: {
           50: "#F2F9F8",

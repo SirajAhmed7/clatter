@@ -63,7 +63,7 @@ function ShopHeaderImage() {
       <motion.div
         ref={bgRef}
         style={{ opacity: opac }}
-        className="absolute top-0 left-0 h-full w-full -z-10"
+        className="absolute top-0 left-0 h-full w-full -z-10 rounded-[36px] sm:rounded-[48px] overflow-hidden"
       >
         <Image
           src={"/shopHero.webp"}
