@@ -24,8 +24,8 @@ export default function HeaderNav() {
       </Link>
       {/* <ul className="text-white p-1 hidden lg:flex gap-2 bg-neutral-900/10 backdrop-blur-[20px] rounded-2xl overflow-hidden  shadow-[0px_10px_24px_0px_rgba(22,22,22,0.15)]"> */}
       <ul className="text-white p-1 hidden lg:flex bg-white/10 backdrop-blur-[20px] rounded-2xl overflow-hidden  shadow-[0px_10px_24px_0px_rgba(22,22,22,0.10)]">
-        <HomeHeaderNavLink to="/men">Men</HomeHeaderNavLink>
-        <HomeHeaderNavLink to="/women">Women</HomeHeaderNavLink>
+        <HomeHeaderNavLink to="/shop/men">Men</HomeHeaderNavLink>
+        <HomeHeaderNavLink to="/shop/women">Women</HomeHeaderNavLink>
         <HomeHeaderNavLink to="/sustainability">
           Sustainability
         </HomeHeaderNavLink>

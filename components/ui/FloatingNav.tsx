@@ -77,8 +77,8 @@ export default function FloatingNav() {
                 />
               </Link>
               <ul className="font-medium p-1 flex bg-[#194759]/10 rounded-2xl overflow-hidden">
-                <FloatingNavLink to="/shop">Men</FloatingNavLink>
-                <FloatingNavLink to="/shop">Women</FloatingNavLink>
+                <FloatingNavLink to="/shop/men">Men</FloatingNavLink>
+                <FloatingNavLink to="/shop/women">Women</FloatingNavLink>
                 <FloatingNavLink to="/sustainability">
                   Sustainability
                 </FloatingNavLink>
@@ -100,14 +100,14 @@ export default function FloatingNav() {
                 <p className="text-sm">Home</p>
               </Link>
               <Link
-                href={"/men"}
+                href={"/shop/men"}
                 className="flex flex-col items-center justify-between gap-1"
               >
                 <PiSneaker className="text-2xl" />
                 <p className="text-sm">Men</p>
               </Link>
               <Link
-                href={"/women"}
+                href={"/shop/women"}
                 className="flex flex-col items-center justify-between gap-1"
               >
                 <PiHighHeel className="text-2xl" />

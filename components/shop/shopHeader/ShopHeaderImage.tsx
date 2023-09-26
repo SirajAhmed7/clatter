@@ -28,6 +28,7 @@ function ShopHeaderImage() {
 
   const filtersColor = useTransform(bgScroll, [0, 0.7], ["#fff", "#0D1F2A"]);
 
+  // TODO: try putting height calculations in useMotionValueEvent
   const bgHeight = bgRef.current
     ? bgRef.current.getBoundingClientRect().height / 2
     : 0;
@@ -79,10 +80,11 @@ function ShopHeaderImage() {
       >
         <div
           className={`${
-            !filterTop ? "" : "bg-neutral-500/10 backdrop-blur-[20px]"
+            !filterTop ? "" : "bg-neutral-500/[0.05] backdrop-blur-[20px]"
             // !filterTop ? "" : "backdrop-blur-[20px]"
           } w-full py-4 rounded-b-[48px]`}
         >
+          {/* TODO: Add filters components */}
           <h2 className="text-center text-3xl font-display">Filters</h2>
         </div>
       </motion.div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 type Props = {
   to: string;
@@ -10,7 +11,11 @@ type Props = {
 };
 
 export default function HomeHeaderNavLink({ to, children }: Props) {
+  const pathname = usePathname();
   const [isHovering, setIsHovering] = useState(false);
+
+  const curPage = to === pathname ? true : false;
+
   return (
     <li>
       <Link
@@ -20,7 +25,7 @@ export default function HomeHeaderNavLink({ to, children }: Props) {
         onMouseLeave={() => setIsHovering(false)}
       >
         <AnimatePresence>
-          {isHovering && (
+          {isHovering && !curPage && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -29,7 +34,11 @@ export default function HomeHeaderNavLink({ to, children }: Props) {
               className="w-full h-full absolute top-0 left-0 rounded-xl bg-white/10"
             ></motion.div>
           )}
+          {curPage && (
+            <motion.div className="w-full h-full absolute top-0 left-0 rounded-xl bg-white/10"></motion.div>
+          )}
         </AnimatePresence>
+
         {children}
       </Link>
     </li>
