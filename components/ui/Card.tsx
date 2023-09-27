@@ -7,6 +7,7 @@ type Props = {
   thumbnailImg: string;
   small?: boolean;
   className?: string;
+  animate?: boolean;
 };
 
 function Card({ name, price, thumbnailImg, small, className = "" }: Props) {

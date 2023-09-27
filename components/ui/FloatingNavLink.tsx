@@ -17,7 +17,6 @@ export default function FloatingNavLink({ to, children }: Props) {
   return (
     <li>
       <Link
-        scroll={false}
         href={to}
         className="relative flex justify-center items-center px-8 py-4"
         onMouseEnter={() => setIsHovering(true)}
