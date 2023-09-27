@@ -23,6 +23,7 @@ export default async function Home() {
       <Sustainability />
       <Shop />
       <HomeNewsletter />
+      {/* TODO: seperate homenewsletter and home footer */}
     </>
   );
 }

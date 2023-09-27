@@ -1,5 +1,6 @@
 import ButtonLinks from "./ButtonLinks";
 import DropDown from "../../ui/DropDown";
+import Filter from "../filterAndSort/Filter";
 
 function ShopFilters() {
   return (
@@ -13,7 +14,7 @@ function ShopFilters() {
       <DropDown windowKey="filter">
         <DropDown.Button>Filter</DropDown.Button>
         <DropDown.Window>
-          <div></div>
+          <Filter />
         </DropDown.Window>
       </DropDown>
 

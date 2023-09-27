@@ -5,7 +5,14 @@ import Link from "next/link";
 type Props = {
   className?: string;
   disabled?: boolean;
-  variant?: "primary" | "secondary" | "white" | "outline" | "free" | "link";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "white"
+    | "outline"
+    | "free"
+    | "link"
+    | "ghost";
   size?: string;
   to?: string;
   scroll?: boolean;
@@ -31,7 +38,10 @@ export default function Button({
     primary: "bg-primary-700 text-white font-medium",
     secondary: "bg-secondary-600 text-white font-medium",
     white: "bg-white text-neutral-900 font-medium",
-    outline: "border border-neutral-800 text-neutral-900",
+    outline:
+      "border border-neutral-800 text-neutral-900 hover:bg-neutral-50 transition-colors",
+    ghost:
+      "bg-transparent hover:bg-neutral-50 transition-colors text-neutral-900 font-medium",
     free: "",
   };
 

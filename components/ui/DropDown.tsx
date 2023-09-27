@@ -53,9 +53,7 @@ function Button({ children }: { children: React.ReactNode }) {
       {children}
       <span>
         <PiCaretDownBold
-          className={`${
-            !isOpen ? "" : "-scale-y-100"
-          } transition-all duration-300`}
+          className={`${!isOpen ? "" : "-scale-y-100"} transition-transform`}
         />
       </span>
     </button>
@@ -77,16 +75,16 @@ function Window({ children }: { children: React.ReactNode }) {
 
   return (
     <AnimatePresence>
+      {/* TODO: try scaling up on open */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
           ref={ref}
           className={`absolute ${
             xPos === "left" ? "left-0" : "right-0"
-          } bottom-0 translate-y-full h-64 w-64 bg-white rounded-[36px] shadow-10 z-20`}
+          } bottom-0 translate-y-full bg-white rounded-[36px] shadow-10 z-[25]`}
         >
           {children}
         </motion.div>
