@@ -25,7 +25,7 @@ function ShoeSize({ shoeSize, size }: Props) {
     // or const query = `${'?'.repeat(search.length && 1)}${search}`;
     const query = search ? `?${search}` : "";
 
-    router.push(`${pathname}${query}`);
+    router.push(`${pathname}${query}`, { scroll: false });
   }
 
   return (
