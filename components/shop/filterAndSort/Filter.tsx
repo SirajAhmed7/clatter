@@ -20,7 +20,7 @@ function Filter() {
       <Button
         variant="outline"
         className="px-6 py-2"
-        onClick={() => router.push(pathname)}
+        onClick={() => router.push(pathname, { scroll: false })}
       >
         Clear filters
       </Button>

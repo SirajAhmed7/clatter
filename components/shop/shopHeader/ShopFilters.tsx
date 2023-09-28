@@ -1,10 +1,32 @@
 import ButtonLinks from "./ButtonLinks";
 import DropDown from "../../ui/DropDown";
 import Filter from "../filterAndSort/Filter";
+import { useEffect, useRef, useState } from "react";
 
 function ShopFilters() {
+  const [filterMaxHeight, setFilterMaxHeight] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(function () {
+    setFilterMaxHeight(
+      ref.current ? window.innerHeight - ref.current?.offsetHeight : 0
+    );
+
+    function handleWindowResize() {
+      setFilterMaxHeight(
+        ref.current ? window.innerHeight - ref.current?.offsetHeight : 0
+      );
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
-    <div className="flex justify-between items-center py-2 px-9">
+    <div ref={ref} className="flex justify-between items-center py-2 px-9">
       {/* <button className="flex gap-2 text-xl items-center font-medium px-5 py-2 rounded-xl hover:bg-neutral-300/30">
         Filter
         <span>
@@ -13,7 +35,7 @@ function ShopFilters() {
       </button> */}
       <DropDown windowKey="filter">
         <DropDown.Button>Filter</DropDown.Button>
-        <DropDown.Window>
+        <DropDown.Window maxHeight={filterMaxHeight}>
           <Filter />
         </DropDown.Window>
       </DropDown>
@@ -22,7 +44,7 @@ function ShopFilters() {
 
       <DropDown xPos="right" windowKey="sort">
         <DropDown.Button>Sort</DropDown.Button>
-        <DropDown.Window>
+        <DropDown.Window maxHeight={filterMaxHeight}>
           <div></div>
         </DropDown.Window>
       </DropDown>

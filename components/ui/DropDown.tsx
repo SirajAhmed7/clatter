@@ -60,7 +60,13 @@ function Button({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Window({ children }: { children: React.ReactNode }) {
+function Window({
+  maxHeight = "100vh",
+  children,
+}: {
+  maxHeight?: number | string;
+  children: React.ReactNode;
+}) {
   const { xPos, isOpen } = useContext(DropDownContext);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -81,10 +87,13 @@ function Window({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          style={{
+            maxHeight,
+          }}
           ref={ref}
           className={`absolute ${
             xPos === "left" ? "left-0" : "right-0"
-          } bottom-0 translate-y-full bg-white rounded-[36px] shadow-10 z-[25]`}
+          } bottom-0 translate-y-full bg-white rounded-[36px] shadow-10 z-[25] overflow-y-auto`}
         >
           {children}
         </motion.div>
