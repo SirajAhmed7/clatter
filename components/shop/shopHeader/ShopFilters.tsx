@@ -1,7 +1,8 @@
 import ButtonLinks from "./ButtonLinks";
 import DropDown from "../../ui/DropDown";
-import Filter from "../filterAndSort/Filter";
+import Filter from "../filter/Filter";
 import { useEffect, useRef, useState } from "react";
+import Sort from "../sort/Sort";
 
 function ShopFilters() {
   const [filterMaxHeight, setFilterMaxHeight] = useState(0);
@@ -45,7 +46,7 @@ function ShopFilters() {
       <DropDown xPos="right" windowKey="sort">
         <DropDown.Button>Sort</DropDown.Button>
         <DropDown.Window maxHeight={filterMaxHeight}>
-          <div></div>
+          <Sort />
         </DropDown.Window>
       </DropDown>
     </div>

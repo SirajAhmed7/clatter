@@ -9,6 +9,7 @@
 // }
 
 // export default ShopPage;
+
 import AllShoes from "../../../components/shop/allShoes/AllShoes";
 import ShopHeader from "../../../components/shop/shopHeader/ShopHeader";
 import Footer from "../../../components/ui/Footer";

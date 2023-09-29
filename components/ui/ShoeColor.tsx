@@ -2,14 +2,17 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { PiCheckBold } from "react-icons/pi";
+import slugify from "slugify";
 
 type Props = {
   colorCode: string;
-  name: string;
+  name?: string;
   size: number;
+  isLink?: boolean;
+  to?: string;
 };
 
-function ShoeColor({ colorCode, name, size }: Props) {
+function ShoeColor({ colorCode, name, size, isLink, to }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -32,11 +35,13 @@ function ShoeColor({ colorCode, name, size }: Props) {
 
   const curColorFilter = searchParams.get("color");
 
-  function handleClick() {
+  const filterParam = slugify(name!, { lower: true });
+
+  function handleClickFilter() {
     const current = new URLSearchParams(Array.from(searchParams.entries()));
 
-    curColorFilter !== name
-      ? current.set("color", name)
+    curColorFilter !== filterParam
+      ? current.set("color", filterParam)
       : current.delete("color");
 
     // cast to string
@@ -51,6 +56,10 @@ function ShoeColor({ colorCode, name, size }: Props) {
     // router.push(`${pathname}${query}`);
   }
 
+  function handleClickLink() {
+    router.push(to!);
+  }
+
   return (
     <button
       style={{
@@ -59,10 +68,10 @@ function ShoeColor({ colorCode, name, size }: Props) {
         height: size,
         borderRadius,
       }}
-      onClick={handleClick}
+      onClick={!isLink ? handleClickFilter : handleClickLink}
       className="relative border border-neutral-100"
     >
-      {curColorFilter === name && (
+      {curColorFilter === filterParam && (
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-white/25">
           <PiCheckBold className="text-neutral-900 text-xl" />
         </div>
