@@ -15,7 +15,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "react-player": "^2.13.0"
+    "react-player": "^2.13.0",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
