@@ -1,30 +1,21 @@
 import ButtonLinks from "./ButtonLinks";
 import DropDown from "../../ui/DropDown";
 import Filter from "../filter/Filter";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Sort from "../sort/Sort";
+import { useWindowResize } from "../../../hooks/useWindowResize";
 
 function ShopFilters() {
   const [filterMaxHeight, setFilterMaxHeight] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(function () {
+  const handleWindowResize = useCallback(function handleWindowResize() {
     setFilterMaxHeight(
       ref.current ? window.innerHeight - ref.current?.offsetHeight : 0
     );
-
-    function handleWindowResize() {
-      setFilterMaxHeight(
-        ref.current ? window.innerHeight - ref.current?.offsetHeight : 0
-      );
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
   }, []);
+
+  useWindowResize(handleWindowResize);
 
   return (
     <div ref={ref} className="flex justify-between items-center py-2 px-9">

@@ -33,9 +33,9 @@ function OverallRating({ starRating, ratingsQty }: Props) {
           )}
         </div> */}
         <RenderStars starRating={starRating} sizeLg={40} sizeSm={32} />
-        <div className="text-5xl font-display font-bold text-neutral-950 tracking-tight">
+        <div className="text-4xl md:text-5xl font-display font-bold text-neutral-950 tracking-tight">
           {starRating?.toFixed(1)}
-          <span className="font-display font-light text-neutral-800 text-4xl ml-2">
+          <span className="font-display font-light text-neutral-800 text-3xl md:text-4xl ml-2">
             ({ratingsQty})
           </span>
         </div>

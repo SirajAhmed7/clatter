@@ -17,7 +17,7 @@ const renderPrevButton = ({
   return (
     <button
       style={{ opacity: isDisabled ? "0.5" : 1 }}
-      className="h-full flex items-center cursor-pointer"
+      className="h-full hidden sm:flex items-center cursor-pointer"
     >
       <PiCaretLeft className="text-2xl text-neutral-800" />
     </button>
@@ -32,7 +32,7 @@ const renderNextButton = ({
   return (
     <button
       style={{ opacity: isDisabled ? "0.5" : 1 }}
-      className="h-full flex items-center cursor-pointer"
+      className="h-full hidden sm:flex items-center cursor-pointer"
     >
       <PiCaretRight className="text-2xl text-neutral-800" />
     </button>

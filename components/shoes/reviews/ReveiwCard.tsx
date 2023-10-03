@@ -9,7 +9,7 @@ type Props = {
 
 function ReveiwCard({ review }: Props) {
   return (
-    <div className="flex flex-col gap-4 p-5 bg-white rounded-[32px] min-w-[320px] max-w-xs min-h-[384px]">
+    <div className="flex flex-col gap-4 p-5 bg-white rounded-[32px] md:min-w-[320px] max-w-full md:max-w-xs md:min-h-[384px]">
       <div className="flex items-center gap-5">
         <Image
           src={review.userImg}
@@ -25,7 +25,7 @@ function ReveiwCard({ review }: Props) {
         <h5 className="subheading-1 text-neutral-900">{review.heading}</h5>
         <p className="body-text text-neutral-900">{review.body}</p>
       </div>
-      <div className="mt-auto">
+      <div className="mt-3 md:mt-auto">
         <TrueToFit
           trueToFit={review.trueToFit}
           maxWidth={0}

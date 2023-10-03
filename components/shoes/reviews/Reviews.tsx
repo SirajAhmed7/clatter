@@ -12,7 +12,7 @@ type Props = {
 
 function Reviews({ starRating, trueToFit, reveiws }: Props) {
   return (
-    <section className="w-full bg-primary-200 py-14 px-9 md:px-20 rounded-[48px] overflow-hidden">
+    <section className="w-full bg-primary-200 py-8 md:py-14 px-5 md:px-10 lg:px-20 rounded-[48px] overflow-hidden">
       <div className="w-full flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
         <OverallRating starRating={starRating} ratingsQty={reveiws?.length} />
         {trueToFit && (
