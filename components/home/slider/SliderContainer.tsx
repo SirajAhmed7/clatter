@@ -66,10 +66,7 @@ function SliderContainer({ shoes: shoesData }: Props) {
     <motion.div
       ref={ref}
       drag={"x"}
-      // dragConstraints={{ left: 0, right: -1129 }}
       dragConstraints={{ left: -scrollWidth, right: 0 }}
-      // dragConstraints={constraintsRef}
-      // dragMomentum={false}
       dragTransition={{ timeConstant: 200 }}
       dragElastic={0.2}
       className="flex items-center gap-5 w-full cursor-grab"

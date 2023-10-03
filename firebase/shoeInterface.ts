@@ -1,9 +1,18 @@
 import { DocumentReference } from "firebase/firestore";
 
-interface Colors {
+export interface Colors {
   colorCode: string;
   name: string;
   id: DocumentReference;
+}
+
+export interface Reviews {
+  starRating: number;
+  heading: string;
+  body: string;
+  trueToFit: number;
+  username: string;
+  userImg: string;
 }
 
 export interface Shoe {
@@ -16,6 +25,7 @@ export interface Shoe {
   type: "men" | "women" | "all";
   id?: string;
   allColors?: Colors[];
+  careGuide?: string[];
   qty?: number;
   description?: string;
   materials?: { name: string; description: string }[];
@@ -23,5 +33,7 @@ export interface Shoe {
   img2?: string;
   img3?: string;
   sizes?: string[];
+  starRating?: number;
+  reviews?: Reviews[];
   trueToFit?: number;
 }

@@ -4,8 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .heading-h2 {
-  @apply font-display text-neutral-950 text-3xl md:text-4xl lg:text-[40px] font-bold capitalize leading-[119%];
+  @apply font-display text-neutral-950 text-3xl md:text-4xl lg:text-[40px] font-bold leading-[119%];
+}
+
+.heading-h5 {
+  @apply font-display text-neutral-800 text-2xl font-medium;
+}
+
+.heading-h6 {
+  @apply font-display font-medium text-base leading-[154%];
+}
+
+.subheading-1 {
+  @apply font-display text-xl font-semibold leading-[140%];
 }
 
 .body-text {
@@ -14,7 +28,10 @@
 
 @layer base {
   html {
-    font-family: Work Sans, system-ui, sans-serif;
+    font-family: "Work Sans", system-ui, sans-serif;
+  }
+  body {
+    font-family: "Work Sans", system-ui, sans-serif;
   }
 }
 
@@ -36,4 +53,50 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  position: absolute;
+  display: flex !important;
+  align-items: center;
+  top: 0;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  height: 100%;
+  width: min-content !important;
+}
+
+.alice-carousel__prev-btn {
+  text-align: unset;
+  left: 0;
+  justify-content: start;
+}
+
+.alice-carousel__next-btn {
+  text-align: unset;
+  right: 0;
+  justify-content: end;
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  z-index: 10;
+}
+
+.alice-carousel__dots-item {
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  @apply !bg-neutral-100;
+}
+
+.alice-carousel__dots-item:hover {
+  @apply !bg-primary-500;
+}
+
+.alice-carousel__dots-item.__active {
+  @apply !bg-primary-700;
 }

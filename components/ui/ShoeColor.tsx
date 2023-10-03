@@ -57,7 +57,7 @@ function ShoeColor({ colorCode, name, size, isLink, to }: Props) {
   }
 
   function handleClickLink() {
-    router.push(to!);
+    router.push(to ? slugify(to!) : "");
   }
 
   return (
@@ -69,7 +69,7 @@ function ShoeColor({ colorCode, name, size, isLink, to }: Props) {
         borderRadius,
       }}
       onClick={!isLink ? handleClickFilter : handleClickLink}
-      className="relative border border-neutral-100"
+      className="font-display relative border border-neutral-100"
     >
       {curColorFilter === filterParam && (
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-white/25">

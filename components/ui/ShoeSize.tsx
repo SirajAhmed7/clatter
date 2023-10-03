@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type Props = {
@@ -38,8 +40,8 @@ function ShoeSize({ shoeSize, size }: Props) {
       className={`${
         curSizeFilter !== shoeSize
           ? "border border-neutral-900 text-neutral-900"
-          : "bg-neutral-900 text-white"
-      }`}
+          : "bg-neutral-900 text-white font-medium"
+      } font-display`}
       onClick={handleClick}
     >
       {shoeSize}

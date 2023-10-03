@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import slugify from "slugify";
 
 type Props = {
   name: string;
@@ -32,7 +33,7 @@ function Card({
       >
         <Link
           className="block absolute top-0 left-0 w-full h-full z-10"
-          href={`/shoes/${name}`}
+          href={`/shoes/${slugify(name)}`}
         ></Link>
         <div
           className={`flex flex-col ${
@@ -90,7 +91,7 @@ function Card({
       >
         <Link
           className="block absolute top-0 left-0 w-full h-full z-10"
-          href={`/shoes/${name}`}
+          href={`/shoes/${slugify(name)}`}
         ></Link>
         <div
           className={`flex flex-col ${

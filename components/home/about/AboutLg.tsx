@@ -105,7 +105,7 @@ function AboutLg() {
       <div className="basis-1/2">
         <div className="md:h-[130vh] lg:h-screen relative mx-[10%] -z-20">
           <div className="space-y-5 max-w-[440px] mx-auto max-h-min absolute inset-0 my-auto">
-            <h2 className="heading-h2">Where fashion meets sustainability</h2>
+            <h2 className="heading-h2">Where Fashion Meets Sustainability</h2>
             <p className="body-text">
               At Clatter, we understand how frustrating it can be to find
               stylish and sustainable options. We believe that style and

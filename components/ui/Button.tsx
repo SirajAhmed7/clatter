@@ -35,7 +35,7 @@ export default function Button({
   };
 
   const variants: variantsType = {
-    primary: "bg-primary-700 text-white font-medium",
+    primary: "bg-primary-600 text-white font-medium",
     secondary: "bg-secondary-600 text-white font-medium",
     white: "bg-white text-neutral-900 font-medium",
     outline:

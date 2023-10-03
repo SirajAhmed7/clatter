@@ -45,3 +45,34 @@ export function sortShoes(a: Shoe, b: Shoe, prop: keyof Shoe, order: string) {
 
   return 0; // names are equal
 }
+
+export function reverseSlugify(input: string) {
+  // Split the input string by hyphens and spaces
+  const words = input.split(/[-\s]/);
+
+  // Initialize an array to store the transformed words
+  const transformedWords = [];
+
+  // Iterate through the words
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i].trim();
+
+    // Check if the word starts with a lowercase letter
+    if (/^[a-z]/.test(word)) {
+      // If it does, combine it with the previous word
+      if (i > 0) {
+        transformedWords[transformedWords.length - 1] += `-${word}`;
+      } else {
+        transformedWords.push(word); // If it's the first word, keep it as is
+      }
+    } else {
+      // If the word starts with an uppercase letter, capitalize it
+      transformedWords.push(word.charAt(0).toUpperCase() + word.slice(1));
+    }
+  }
+
+  // Join the transformed words into a single string
+  const result = transformedWords.join(" ");
+
+  return result;
+}
