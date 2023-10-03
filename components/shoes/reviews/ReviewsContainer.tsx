@@ -47,9 +47,9 @@ function ReviewsContainer({ children }: { children: React.ReactNode }) {
       dragTransition={{ timeConstant: 500 }}
       dragElastic={0.2}
       className={`grid grid-cols-1 sm:grid-cols-2 md:flex gap-6 ${cursorType}`}
-      onMouseEnter={() => setCursorType("cursor-grab")}
-      onMouseDown={() => setCursorType("cursor-grabbing")}
-      onMouseUp={() => setCursorType("cursor-grab")}
+      onMouseEnter={() => setCursorType("md:cursor-grab")}
+      onMouseDown={() => setCursorType("md:cursor-grabbing")}
+      onMouseUp={() => setCursorType("md:cursor-grab")}
     >
       {children}
     </motion.div>

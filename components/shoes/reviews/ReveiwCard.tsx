@@ -9,7 +9,7 @@ type Props = {
 
 function ReveiwCard({ review }: Props) {
   return (
-    <div className="flex flex-col gap-4 p-5 bg-white rounded-[32px] md:min-w-[320px] max-w-full md:max-w-xs md:min-h-[384px]">
+    <div className="flex flex-col gap-4 p-5 bg-primary-50 rounded-[32px] md:min-w-[320px] max-w-full md:max-w-xs md:min-h-[384px]">
       <div className="flex items-center gap-5">
         <Image
           src={review.userImg}
