@@ -65,7 +65,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['"Work Sans"', "Roboto", "ui-sans-serif", "system-ui"],
+        display: ['"Work Sans"', "ui-sans-serif", "system-ui"],
         body: ['"Miriam Libre"', '"Work Sans"', "ui-sans-serif", "system-ui"],
       },
     },

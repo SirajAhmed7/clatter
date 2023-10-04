@@ -15,8 +15,6 @@ export default async function ShoesPage({
 
   const [shoes, shoesFallback] = await getShoes(name);
 
-  console.log(`fallback: ${shoesFallback?.launched}`);
-
   if (shoes.launched)
     return (
       <>
