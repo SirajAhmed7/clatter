@@ -10,7 +10,7 @@ export default function SecondaryHeaderNav() {
 
   return (
     <nav
-      className={`relative flex font-display mb-6 py-4 sm:py-2 px-3 sm:px-4 z-10 items-center justify-between ${
+      className={`relative flex font-display mb-6 py-4 sm:py-3 px-3 sm:px-4 z-10 items-center justify-between ${
         !floating ? "" : "opacity-0 invisible pointer-events-none"
       }`}
     >

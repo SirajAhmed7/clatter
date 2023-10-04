@@ -1,3 +1,4 @@
+import NotLaunched from "../../../components/shoes/NotLaunched";
 import ShoesContent from "../../../components/shoes/ShoesContent";
 import Reviews from "../../../components/shoes/reviews/Reviews";
 import Footer from "../../../components/ui/Footer";
@@ -12,22 +13,43 @@ export default async function ShoesPage({
 }) {
   const name = reverseSlugify(params.slug);
 
-  const [shoes] = await getShoes(name);
+  const [shoes, shoesFallback] = await getShoes(name);
 
-  return (
-    <>
-      <header>
-        <SecondaryHeaderNav />
-      </header>
-      <main className="px-4 space-y-10 mb-24">
-        <ShoesContent shoes={shoes} />
-        <Reviews
-          starRating={shoes.starRating}
-          trueToFit={shoes.trueToFit}
-          reveiws={shoes.reviews}
-        />
-      </main>
-      <Footer />
-    </>
-  );
+  console.log(`fallback: ${shoesFallback?.launched}`);
+
+  if (shoes.launched)
+    return (
+      <>
+        <header>
+          <SecondaryHeaderNav />
+        </header>
+        <main className="px-4 space-y-10 mb-24">
+          <ShoesContent shoes={shoes} />
+          <Reviews
+            starRating={shoes.starRating}
+            trueToFit={shoes.trueToFit}
+            reveiws={shoes.reviews}
+          />
+        </main>
+        <Footer />
+      </>
+    );
+  else
+    return (
+      <>
+        <NotLaunched name={shoes.name} />
+        <header>
+          <SecondaryHeaderNav />
+        </header>
+        <main className="px-4 space-y-10 mb-24">
+          <ShoesContent shoes={shoesFallback} />
+          <Reviews
+            starRating={shoesFallback.starRating}
+            trueToFit={shoesFallback.trueToFit}
+            reveiws={shoesFallback.reviews}
+          />
+        </main>
+        <Footer />
+      </>
+    );
 }

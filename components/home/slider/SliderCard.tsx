@@ -5,6 +5,7 @@ import { MouseEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import slugify from "slugify";
 
 type Props = {
   name: string;
@@ -32,7 +33,7 @@ function SliderCard({
 
   function handleClick(e: MouseEvent) {
     e.preventDefault();
-    router.push(`shoes/${name}`);
+    router.push(`shoes/${slugify(name)}`);
   }
 
   // const imgVariants = {
@@ -266,7 +267,10 @@ function SliderCard({
           {isHovering && <p>${price}</p>}
         </motion.div> */}
           <div className={`w-full z-10`}>
-            <Link href={`/shoes/${name}`} className="absolute left-7 bottom-4">
+            <Link
+              href={`/shoes/${slugify(name)}`}
+              className="absolute left-7 bottom-4"
+            >
               <motion.p
                 layout
                 transition={{

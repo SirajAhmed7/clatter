@@ -26,5 +26,20 @@ export async function getShoes(slug: string) {
     shoes = [...shoes, doc.data() as Shoe];
   });
 
+  const [curShoes] = shoes;
+
+  if (!curShoes.launched) {
+    const querySnapshot = query(
+      collection(db, "shoes"),
+      where("name", "==", "Stride Classic Teal")
+    );
+
+    const docsSnap = await getDocs(querySnapshot);
+
+    docsSnap.forEach((doc) => {
+      shoes = [...shoes, doc.data() as Shoe];
+    });
+  }
+
   return shoes;
 }
