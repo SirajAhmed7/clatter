@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section className="pl-4 sm:pl-5 space-y-4 sm:space-y-10 mb-48">
       <h1 className="text-5xl min-[400px]:text-6xl sm:text-8xl lg:text-9xl font-extrabold font-display text-neutral-950 leading-[116%] tracking-tight">
-        Sustaiability
+        Sustainability
       </h1>
       <div className="flex flex-col-reverse sm:flex-row gap-6">
         <p className="body-text pr-4 sm:p-0 text-neutral-950 max-w-sm sm:max-w-[200px] md:max-w-xs lg:max-w-sm">
