@@ -2,7 +2,7 @@ import InfoFullWidth from "../ui/InfoFullWidth";
 
 function SustainabilityInfo() {
   return (
-    <section className="mb-64">
+    <section className="mb-24 md:mb-64">
       <div className="space-y-20 md:space-y-48">
         <InfoFullWidth
           heading="Sustainable Materials"
