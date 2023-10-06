@@ -5,7 +5,12 @@ import HomeNewsletterForm from "./HomeNewsletterForm";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { PiFacebookLogo, PiInstagramLogo, PiTiktokLogo } from "react-icons/pi";
+import {
+  PiEnvelopeSimple,
+  PiFacebookLogo,
+  PiInstagramLogo,
+  PiTiktokLogo,
+} from "react-icons/pi";
 
 function HomeNewsletter() {
   const refFooter = useRef(null);
@@ -104,7 +109,7 @@ function HomeNewsletter() {
             >
               Sustainability
             </Link>
-            <Link
+            {/* <Link
               href={"/support"}
               className="font-display text-neutral-700 hover:opacity-70 active:opacity-70 capitalize"
             >
@@ -115,7 +120,7 @@ function HomeNewsletter() {
               className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
             >
               About us
-            </Link>
+            </Link> */}
             <Link
               href={"/signin"}
               className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
@@ -123,6 +128,13 @@ function HomeNewsletter() {
               Sign in
             </Link>
             <div className="flex gap-5 mt-2">
+              <Link
+                href={"/"}
+                className="text-2xl text-neutral-700 hover:opacity-70 active:opacity-70"
+              >
+                {/* <PiInstagramLogoDuotone /> */}
+                <PiEnvelopeSimple />
+              </Link>
               <Link
                 href={"/"}
                 className="text-2xl text-neutral-700 hover:opacity-70 active:opacity-70"

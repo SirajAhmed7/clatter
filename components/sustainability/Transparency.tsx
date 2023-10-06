@@ -13,6 +13,13 @@ function Transparency() {
 
   // const bgYPos = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const bgYPos = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+  // const bgBlur = useTransform(
+  //   scrollYProgress,
+  //   // [0, 0.4, 0.6, 1],
+  //   // ["blur(20px)", "blur(0px)", "blur(0px)", "blur(20px)"]
+  //   [0, 0.5, 1],
+  //   ["blur(10px)", "blur(0px)", "blur(10px)"]
+  // );
 
   return (
     // <section className={`h-[680px] mb-48`}>
@@ -26,6 +33,12 @@ function Transparency() {
           backgroundPositionY: bgYPos,
         }}
       >
+        {/* <motion.div
+          className="absolute top-0 left-0 w-full h-full -z-0"
+          style={{
+            backdropFilter: bgBlur,
+          }}
+        ></motion.div> */}
         {/* <Image
           src={"/transparency.webp"}
           fill
