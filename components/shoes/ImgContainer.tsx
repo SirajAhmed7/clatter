@@ -22,6 +22,7 @@ function ImgContainer({ img1, img2, img3, name }: Props) {
       <Image
         src={img1}
         fill
+        priority
         alt={name}
         className="absolute top-0 left-0 object-cover"
       />
@@ -36,6 +37,7 @@ function ImgContainer({ img1, img2, img3, name }: Props) {
       <Image
         src={img2}
         fill
+        priority
         alt={name}
         className="absolute top-0 left-0 object-cover"
       />
@@ -50,6 +52,7 @@ function ImgContainer({ img1, img2, img3, name }: Props) {
       <Image
         src={img3}
         fill
+        priority
         alt={name}
         className="absolute top-0 left-0 object-cover"
       />

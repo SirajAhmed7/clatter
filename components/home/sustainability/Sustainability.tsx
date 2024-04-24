@@ -28,6 +28,7 @@ function Sustainability() {
         <Image
           src={"/homeSustainability-min.jpg"}
           fill
+          priority
           className="absolute object-cover w-full h-full"
           alt="Shoes in a garden of flowers"
         />

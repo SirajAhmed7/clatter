@@ -10,6 +10,7 @@ function Features() {
           src={"/features.webp"}
           fill
           alt="A girl and a boy holding hands"
+          priority
           className="absolute top-0 left-0 object-cover w-full h-full"
         />
       </div>

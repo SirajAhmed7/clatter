@@ -10,6 +10,7 @@ function AboutSm() {
           <Image
             src={"/about1.jpg"}
             fill
+            priority
             className="w-full h-full object-cover"
             alt="About 1"
           />
@@ -31,6 +32,7 @@ function AboutSm() {
           <Image
             src={"/about2.jpg"}
             fill
+            priority
             className="w-full h-full object-cover"
             alt="About 1"
           />
@@ -52,6 +54,7 @@ function AboutSm() {
           <Image
             src={"/about3.jpg"}
             fill
+            priority
             className="w-full h-full object-cover"
             alt="About 1"
           />
