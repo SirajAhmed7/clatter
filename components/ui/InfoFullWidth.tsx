@@ -41,6 +41,7 @@ function InfoFullWidth({ heading, body, img, isImgLeft, showPattern }: Props) {
             // sizes="(min-width: 1200px) 67vw"
             className="object-cover"
             alt="Production"
+            priority
           />
         </div>
       </div>
