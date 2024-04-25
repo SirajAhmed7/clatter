@@ -18,6 +18,7 @@ function SliderContainer({ shoes: shoesData }: Props) {
   // const constraintsRef = useRef(null);
   const ref = useRef<HTMLDivElement>(null);
   const [scrollWidth, setScrollWidth] = useState(0);
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
   const shoes: Shoe[] = JSON.parse(shoesData);
 
@@ -50,7 +51,7 @@ function SliderContainer({ shoes: shoesData }: Props) {
   function handleHover(i: number) {
     const timeoutId = setTimeout(() => {
       setOpenIndex(i);
-    }, 150);
+    }, 75);
     // console.log(typeof timeoutId);
     setScaleTimeout(Number(timeoutId));
   }
@@ -61,6 +62,14 @@ function SliderContainer({ shoes: shoesData }: Props) {
     }
   }
 
+  function handleMouseDown() {
+    setIsMouseDown(true);
+  }
+
+  function handleMouseUp() {
+    setIsMouseDown(false);
+  }
+
   return (
     // <div className="w-full px-4">
     <motion.div
@@ -69,7 +78,11 @@ function SliderContainer({ shoes: shoesData }: Props) {
       dragConstraints={{ left: -scrollWidth, right: 0 }}
       dragTransition={{ timeConstant: 200 }}
       dragElastic={0.2}
-      className="flex items-center gap-5 w-full cursor-grab"
+      className={`flex items-center gap-5 w-full ${
+        isMouseDown ? "cursor-grabbing" : "cursor-grab"
+      }`}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
     >
       <LayoutGroup>
         {shoes?.map((shoe, i) => (

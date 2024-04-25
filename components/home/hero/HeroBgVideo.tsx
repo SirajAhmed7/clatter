@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function HeroBgVideo() {
   return (
@@ -21,17 +21,18 @@ export default function HeroBgVideo() {
         // crossOrigin=""
         muted
         src="/heroBgVideo.mp4"
+        poster="/homeVideoThumbnail-min.webp"
         // src="https://firebasestorage.googleapis.com/v0/b/clatter-c848b.appspot.com/o/Clatter%20hero%20bg%20video%202%20light%20min.mp4?alt=media&token=19de18c7-764f-4228-aa34-0ef7642da7bf"
       ></video>
 
-      <Image
+      {/* <Image
         src={"/homeVideoThumbnail-min.webp"}
         alt="Clatter bg video thumbnail"
         className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none -z-10"
         width={"1920"}
         height={"1080"}
         priority
-      />
+      /> */}
     </div>
   );
 }

@@ -58,7 +58,7 @@ function SliderCard({
   //     transition={{
   //       duration: 0.5,
   //       // ease: "easeInOut",
-  //       ease: [0.38, -0.02, 0.39, 1.2],
+  //       ease: [.47,1.64,.41,.8],
   //       // type: "tween",
   //     }}
   //     className={`relative font-body text-base py-4 px-7 bg-white overflow-hidden ${className} ${
@@ -100,7 +100,7 @@ function SliderCard({
   //           layout
   //           transition={{
   //             duration: 0.5,
-  //             ease: [0.38, -0.02, 0.39, 1.2],
+  //             ease: [.47,1.64,.41,.8],
   //           }}
   //           className="absolute left-7 bottom-4"
   //         >
@@ -133,7 +133,7 @@ function SliderCard({
   //       // variants={imgVariants}
   //       transition={{
   //         duration: 0.5,
-  //         ease: [0.38, -0.02, 0.39, 1.2],
+  //         ease: [.47,1.64,.41,.8],
   //       }}
   //       // style={{
   //       //   transform: isHovering
@@ -223,7 +223,7 @@ function SliderCard({
         transition={{
           duration: 0.5,
           // ease: "easeInOut",
-          ease: [0.38, -0.02, 0.39, 1.2],
+          ease: [0.47, 1.64, 0.41, 0.8],
           // type: "tween",
         }}
         className={`hidden lg:block relative font-body text-base py-4 px-7 bg-white overflow-hidden ${className} ${
@@ -275,7 +275,7 @@ function SliderCard({
                 layout
                 transition={{
                   duration: 0.5,
-                  ease: [0.38, -0.02, 0.39, 1.2],
+                  ease: [0.47, 1.64, 0.41, 0.8],
                 }}
                 // className="absolute left-7 bottom-4"
               >
@@ -288,39 +288,44 @@ function SliderCard({
             )}
           </div>
         </motion.div>
-        <motion.div
+        <div
           // layout
-          initial={{
-            x: "-50%",
-            y: "-50%",
-            // width: "200px",
-            rotate: isHovering ? "90deg" : "0",
-          }}
-          animate={{
-            x: "-50%",
-            y: "-50%",
-            rotate: isHovering ? "0" : "90deg",
-            scale: isHovering ? "1.8" : "1",
-            // width: "200px",
-          }}
-          exit={{
-            x: "-50%",
-            y: "-50%",
-            rotate: isHovering ? "0" : "90deg",
-            scale: isHovering ? "1.8" : "1",
-          }}
+          // initial={{
+          //   x: "-50%",
+          //   y: "-50%",
+          //   // width: "200px",
+          //   rotate: isHovering ? "90deg" : "0",
+          // }}
+          // animate={{
+          //   x: "-50%",
+          //   y: "-50%",
+          //   rotate: isHovering ? "0" : "90deg",
+          //   scale: isHovering ? "1.8" : "1",
+          //   // width: "200px",
+          // }}
+          // exit={{
+          //   x: "-50%",
+          //   y: "-50%",
+          //   rotate: isHovering ? "0" : "90deg",
+          //   scale: isHovering ? "1.8" : "1",
+          // }}
           // variants={imgVariants}
-          transition={{
-            duration: 0.5,
-            ease: [0.38, -0.02, 0.39, 1.2],
-          }}
+          // transition={{
+          //   duration: 0.5,
+          //   ease: [.47,1.64,.41,.8],
+          // }}
+          // className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-xs w-[200px] h-36 z-[1] pointer-events-none ${
+          //   isHovering ? "rotate-0 scale-[180%]" : "rotate-90 scale-100"
+          // } transition-all duration-[400ms] ease-[cubic-bezier(0.38,-0.02,0.39,1.2)]`}
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-xs w-[200px] h-36 z-[1] pointer-events-none ${
+            isHovering ? "rotate-0 scale-[180%]" : "rotate-90 scale-100"
+          } transition-all duration-500 ease-[cubic-bezier(0.47,1.64,0.41,0.8)]`}
           // style={{
           //   transform: isHovering
           //     ? "translate(-50%, -50%)"
           //     : "translate(-50%, -50%) rotate(90deg)",
           // }}
           // className={`absolute top-1/2 left-1/2 -translate-x-1/2 rotate-90 -translate-y-1/2 w-[60%] h-36`}
-          className={`absolute top-1/2 left-1/2 max-w-xs w-[200px] h-36 z-[1] pointer-events-none`}
           // className={`absolute top-1/2 left-1/2 h-36 z-[1]`}
         >
           {/* <Image
@@ -337,7 +342,7 @@ function SliderCard({
           className={`object-contain`}
           // className={`"object-contain  ${isHovering ? "rotate-90" : ""}`}
         /> */}
-          <motion.img
+          <img
             src={sliderImg}
             // initial={{
             //   objectFit: "contain",
@@ -357,7 +362,7 @@ function SliderCard({
             // className={`object-contain`}
             // className={`"object-contain  ${isHovering ? "rotate-90" : ""}`}
           />
-        </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
