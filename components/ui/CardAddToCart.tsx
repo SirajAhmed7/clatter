@@ -29,6 +29,8 @@ function CardAddToCart({ name, price, thumbnailImg, sizes }: Props) {
   // //     ?.closest(".card-atc-flex")
   // //     ?.getBoundingClientRect().width;
   // // }, []);
+  const lint = { price, thumbnailImg };
+  console.log(lint);
 
   return (
     <div className="relative flex justify-end w-full z-20">
