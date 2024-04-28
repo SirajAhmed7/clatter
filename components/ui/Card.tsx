@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
+import CardAddToCart from "./CardAddToCart";
 
 type Props = {
   name: string;
   price: number;
   thumbnailImg: string;
+  sizes?: string[];
   small?: boolean;
   className?: string;
   animate?: boolean;
@@ -18,6 +20,7 @@ function Card({
   name,
   price,
   thumbnailImg,
+  sizes,
   small,
   className = "",
   animate,
@@ -38,13 +41,19 @@ function Card({
         <div
           className={`flex flex-col ${
             small ? "justify-end" : "justify-between"
-          } h-full`}
+          } h-full card-atc-flex`}
         >
           {!small && (
             <div className="flex justify-end">
-              <button className="relative after:absolute after:bg-neutral-100/80 after:content-[''] after:w-[140%] after:h-[140%] after:opacity-0 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:after:opacity-100 after:transition-opacity after:ease-in-out after:duration-500 after:rounded-full z-20">
+              {/* <button className="relative after:absolute after:bg-neutral-100/80 after:content-[''] after:w-[140%] after:h-[140%] after:opacity-0 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:after:opacity-100 after:transition-opacity after:ease-in-out after:duration-500 after:rounded-full z-20">
                 <span className="relative z-10">Add to cart</span>
-              </button>
+              </button> */}
+              <CardAddToCart
+                name={name}
+                price={price}
+                thumbnailImg={thumbnailImg}
+                sizes={sizes}
+              />
             </div>
           )}
           <div
@@ -97,13 +106,19 @@ function Card({
         <div
           className={`flex flex-col ${
             small ? "justify-end" : "justify-between"
-          } h-full`}
+          } h-full card-atc-flex`}
         >
           {!small && (
             <div className="flex justify-end">
-              <button className="relative after:absolute after:bg-neutral-100/80 after:content-[''] after:w-[140%] after:h-[140%] after:opacity-0 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:after:opacity-100 after:transition-opacity after:ease-in-out after:duration-500 after:rounded-full z-20">
+              {/* <button className="relative after:absolute after:bg-neutral-100/80 after:content-[''] after:w-[140%] after:h-[140%] after:opacity-0 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:after:opacity-100 after:transition-opacity after:ease-in-out after:duration-500 after:rounded-full z-20">
                 <span className="relative z-10">Add to cart</span>
-              </button>
+              </button> */}
+              <CardAddToCart
+                name={name}
+                price={price}
+                thumbnailImg={thumbnailImg}
+                sizes={sizes}
+              />
             </div>
           )}
           <div

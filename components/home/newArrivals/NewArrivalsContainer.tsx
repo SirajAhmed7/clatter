@@ -12,6 +12,7 @@ export default async function NewArrivalsContainer() {
             key={shoe.name}
             name={shoe.name}
             price={shoe.price}
+            sizes={shoe.sizes}
             thumbnailImg={shoe.thumbnailImg}
             className="flex-grow w-full"
           />

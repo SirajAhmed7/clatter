@@ -26,6 +26,15 @@ export default function Loading() {
           <div
             className={`relative font-body text-base md:text-lg text-neutral-950 rounded-[36px] min-h-[256px] md:min-h-[296px] py-4 px-7 flex-grow w-full bg-primary-200 animate-pulse`}
           ></div>
+          <div
+            className={`relative font-body text-base md:text-lg text-neutral-950 rounded-[36px] min-h-[256px] md:min-h-[296px] py-4 px-7 flex-grow w-full bg-primary-200 animate-pulse`}
+          ></div>
+          <div
+            className={`relative font-body text-base md:text-lg text-neutral-950 rounded-[36px] min-h-[256px] md:min-h-[296px] py-4 px-7 flex-grow w-full bg-primary-200 animate-pulse`}
+          ></div>
+          <div
+            className={`relative font-body text-base md:text-lg text-neutral-950 rounded-[36px] min-h-[256px] md:min-h-[296px] py-4 px-7 flex-grow w-full bg-primary-200 animate-pulse`}
+          ></div>
         </div>
       </section>
       <Footer />

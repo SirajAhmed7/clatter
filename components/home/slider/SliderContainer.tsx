@@ -91,6 +91,8 @@ function SliderContainer({ shoes: shoesData }: Props) {
             name={shoe.name}
             price={shoe.price}
             sliderImg={shoe.sliderImg}
+            thumbnailImg={shoe.thumbnailImg}
+            sizes={shoe.sizes}
             className="flex-grow w-full"
             curIndex={i}
             openIndex={openIndex}

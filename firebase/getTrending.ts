@@ -1,5 +1,4 @@
 import {
-  DocumentData,
   DocumentReference,
   collection,
   getDoc,
@@ -8,26 +7,10 @@ import {
 } from "firebase/firestore";
 import firebasApp from "./firebaseConfig";
 import { Shoe } from "./shoeInterface";
+import { getArrayData } from "./getArrayData";
 // import { Shoe } from "./shoeInterface";
 
 const db = getFirestore(firebasApp);
-
-const getArrayData = async <T>(
-  docRefs: Promise<DocumentData | undefined>[]
-) => {
-  const dataArray: T[] = [];
-
-  // await docRefs.forEach(async (doc) => {
-  //   const d = await doc;
-  //   dataArray.push(d);
-  // });
-  for (const doc of docRefs) {
-    const d = await doc;
-    dataArray.push(d as T);
-  }
-
-  return dataArray;
-};
 
 export async function getTrending() {
   const querySnapshot = await getDocs(collection(db, "trending"));

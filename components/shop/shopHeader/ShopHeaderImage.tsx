@@ -70,6 +70,7 @@ function ShopHeaderImage() {
           fill
           className="object-cover"
           alt="Shop header"
+          priority
         />
         <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.09)_12.81%,rgba(0,0,0,0.06)_16.46%,rgba(0,0,0,0.00)_52.4%,rgba(0,0,0,0.06)_77.4%,rgba(0,0,0,0.14)_90.42%,rgba(0,0,0,0.17)_100%)]"></div>
       </motion.div>

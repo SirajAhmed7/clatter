@@ -48,6 +48,7 @@ function AllShoesContainer({ allShoes }: Props) {
               key={shoe.name}
               name={shoe.name}
               price={shoe.price}
+              sizes={shoe.sizes}
               thumbnailImg={shoe.thumbnailImg}
               className="flex-grow w-full"
               animate
