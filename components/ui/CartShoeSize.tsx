@@ -1,4 +1,12 @@
-function CartShoeSize({ shoeSize, size }: { shoeSize: string; size: number }) {
+function CartShoeSize({
+  shoeSize,
+  size,
+  onClick,
+}: {
+  shoeSize: string;
+  size: number;
+  onClick: (size: string) => void;
+}) {
   const borderRadius = size / 4;
 
   return (
@@ -9,7 +17,7 @@ function CartShoeSize({ shoeSize, size }: { shoeSize: string; size: number }) {
         borderRadius,
       }}
       className={`border border-current text-inherit font-medium hover:bg-neutral-300/40 font-display transition-colors duration-300`}
-      // onClick={handleClick}
+      onClick={() => onClick(shoeSize)}
     >
       {shoeSize}
     </button>

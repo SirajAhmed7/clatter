@@ -1,3 +1,4 @@
+import { useCart } from "../../contexts/CartContext";
 import CartShoeSize from "./CartShoeSize";
 import DropDown from "./DropDown";
 
@@ -9,28 +10,13 @@ type Props = {
 };
 
 function CardAddToCart({ name, price, thumbnailImg, sizes }: Props) {
-  // const ref = useRef<HTMLDivElement>(null);
-  // const [sizesWindowWidth, setSizesWindowWidth] = useState<number>();
+  const { addToCart } = useCart();
 
-  // // card-atc-flex
+  function handleClick(size: string) {
+    addToCart({ name, price, thumbnailImg, size });
+  }
 
-  // const getWidth = useCallback(function getWidth() {
-  //   const flexContainerWidth = ref.current
-  //     ?.closest(".card-atc-flex")
-  //     ?.getBoundingClientRect().width;
-
-  //   setSizesWindowWidth(flexContainerWidth);
-  // }, []);
-
-  // useWindowResize(getWidth);
-
-  // // useEffect(function () {
-  // //   const flexContainerWidth = ref.current
-  // //     ?.closest(".card-atc-flex")
-  // //     ?.getBoundingClientRect().width;
-  // // }, []);
-  const lint = { price, thumbnailImg };
-  console.log(lint);
+  sizes?.sort((a, b) => Number(a) - Number(b));
 
   return (
     <div className="relative flex justify-end w-full z-20">
@@ -60,6 +46,7 @@ function CardAddToCart({ name, price, thumbnailImg, sizes }: Props) {
                 <CartShoeSize
                   shoeSize={size}
                   size={40}
+                  onClick={handleClick}
                   key={`${name}-${size}`}
                 />
               ))}

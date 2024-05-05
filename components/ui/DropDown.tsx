@@ -78,11 +78,13 @@ function Button({
   noCaret,
   className,
   customClassName,
+  hoverOpenColor = "bg-neutral-100/30",
   children,
 }: {
   noCaret?: boolean;
   className?: string;
   customClassName?: string;
+  hoverOpenColor?: string;
   children: React.ReactNode;
 }) {
   const {
@@ -95,7 +97,7 @@ function Button({
   } = useContext(DropDownContext);
 
   const classes = customClassName
-    ? `${customClassName} ${openOnHover && isOpen ? "bg-neutral-100/30" : ""}`
+    ? `${customClassName} ${openOnHover && isOpen ? hoverOpenColor : ""}`
     : `flex gap-2 text-xl items-center font-medium px-5 py-2 rounded-xl hover:bg-neutral-300/30 transition-colors ${className}`;
 
   return (

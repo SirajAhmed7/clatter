@@ -100,7 +100,7 @@ function AboutLg() {
             <div className="absolute bg-[center_top] min-[1800px]:bg-[center_center] bg-cover top-0 left-0 max-h-[640px] w-full h-full -z-20 bg-[url('/about1.jpg')]"></div>
           </div>
         </div>
-        <div className="absolute h-full w-full right-0 top-0 translate-x-full bg-about-text-gradient -z-10"></div>
+        {/* <div className="absolute h-full w-full right-0 top-0 translate-x-full bg-about-text-gradient -z-10"></div> */}
       </div>
       <div className="basis-1/2">
         <div className="md:h-[130vh] lg:h-screen relative mx-[10%] -z-20">

@@ -5,8 +5,9 @@ import { useNav } from "../../contexts/NavContext";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { PiHouse, PiSneaker, PiHighHeel, PiPlant } from "react-icons/pi";
+import { PiHouse, PiSneaker, PiHighHeel, PiShoppingCart } from "react-icons/pi";
 import FloatingNavLink from "./FloatingNavLink";
+import GlobalCart from "../cart/globalCart/GlobalCart";
 
 export default function FloatingNav() {
   const floating = useNav();
@@ -50,7 +51,7 @@ export default function FloatingNav() {
             exit="ExitState"
             variants={{
               initialState: {
-                y: 90,
+                y: 100,
                 // x: -336,
                 // x: dims !== undefined ? dims : 0,
                 x: dims,
@@ -60,7 +61,7 @@ export default function FloatingNav() {
                 // x: 0,
                 x: dims,
               },
-              ExitState: { y: 90 },
+              ExitState: { y: 100 },
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className={`fixed text-neutral-900 bottom-4 lg:bottom-10 md:px-4 w-[41rem] left-1/2 font-display z-50 max-w-[92vw] mx-auto bg-primary-50/[40%] rounded-2xl backdrop-blur-xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.10)]`}
@@ -76,13 +77,14 @@ export default function FloatingNav() {
                   alt="Clatter logo"
                 />
               </Link>
-              <ul className="font-medium p-1 flex bg-[#194759]/10 rounded-2xl overflow-hidden">
+              <ul className="font-medium p-1 flex bg-[#194759]/10 rounded-2xl">
                 <FloatingNavLink to="/shop/men">Men</FloatingNavLink>
                 <FloatingNavLink to="/shop/women">Women</FloatingNavLink>
                 <FloatingNavLink to="/sustainability">
                   Sustainability
                 </FloatingNavLink>
-                <FloatingNavLink to="/cart">Cart</FloatingNavLink>
+                {/* <FloatingNavLink to="/cart">Cart</FloatingNavLink> */}
+                <GlobalCart yPos="top" layoutId="floatingNavLink" />
               </ul>
 
               <button className="flex justify-center items-center font-medium rounded-xl">
@@ -114,11 +116,11 @@ export default function FloatingNav() {
                 <p className="text-sm">Women</p>
               </Link>
               <Link
-                href={"/sustainability"}
+                href={"/cart"}
                 className="flex flex-col items-center justify-between gap-1"
               >
-                <PiPlant className="text-2xl" />
-                <p className="text-sm">Sustainability</p>
+                <PiShoppingCart className="text-2xl" />
+                <p className="text-sm">Cart</p>
               </Link>
             </div>
           </motion.nav>

@@ -30,7 +30,7 @@ export default function SecondaryHeaderNavLink({ to, children }: Props) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              layoutId="navLink"
+              layoutId="navLinkSec"
               className="w-full h-full absolute top-0 left-0 rounded-xl bg-primary-700/10"
             ></motion.div>
           )}
