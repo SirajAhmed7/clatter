@@ -7,7 +7,7 @@ import "./globals.css";
 import { Metadata } from "next";
 import CartProvider from "../contexts/CartContext";
 import { Toaster } from "react-hot-toast";
-import { PiShoppingCartFill } from "react-icons/pi";
+import { PiShoppingCartFill, PiWarningCircleFill } from "react-icons/pi";
 
 export const metadata: Metadata = {
   title: "Clatter",
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar rounded-scrollbar">
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg" sizes="any" />
       </head>
@@ -48,7 +48,13 @@ export default function RootLayout({
                   ),
                 },
                 error: {
-                  duration: 5000,
+                  duration: 4000,
+                  icon: (
+                    <PiWarningCircleFill
+                      fontSize={"24px"}
+                      className="text-amber-500"
+                    />
+                  ),
                 },
                 style: {
                   fontSize: "16px",

@@ -36,7 +36,8 @@ function GlobalCart({
           }
         />
       </DropDown.Button>
-      <DropDown.Window maxHeight={"70vh"} scrollPosNearest>
+      {/* <DropDown.Window maxHeight={"460px"} scrollPosNearest> */}
+      <DropDown.Window scrollPosNearest>
         <CartWindow cart={cart} />
       </DropDown.Window>
     </DropDown>

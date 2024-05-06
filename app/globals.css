@@ -26,6 +26,11 @@
   @apply font-body text-neutral-900 text-base font-normal leading-[169%];
 }
 
+.rounded-scrollbar {
+  @apply scrollbar-thumb-rounded-full scrollbar-thumb-neutral-200 hover:scrollbar-thumb-neutral-400 active:scrollbar-thumb-neutral-300 scrollbar-track-neutral-50;
+  /* @apply scrollbar-thumb-rounded-full scrollbar-thumb-neutral-100 hover:scrollbar-thumb-neutral-300 active:scrollbar-thumb-neutral-100 scrollbar-track-neutral-200; */
+}
+
 @layer base {
   html {
     font-family: "Work Sans", system-ui, sans-serif;

@@ -11,7 +11,7 @@ export default function HeaderNav() {
 
   return (
     <nav
-      className={`relative font-display py-4 sm:py-2 px-3 sm:px-6 z-10 items-center justify-between ${
+      className={`relative font-display py-4 sm:py-2 px-3 sm:px-6 z-20 items-center justify-between ${
         !floating ? "flex" : "hidden"
       }`}
     >

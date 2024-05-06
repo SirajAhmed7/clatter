@@ -32,7 +32,13 @@ function ShoesContent({ shoes }: Props) {
         </div>
         <Colors colors={shoes.allColors!} />
         <Sizes sizes={shoes.sizes!} />
-        <ButtonGroup />
+        <ButtonGroup
+          shoe={{
+            name: shoes.name,
+            price: shoes.price,
+            thumbnailImg: shoes.thumbnailImg,
+          }}
+        />
         <Description description={shoes.description} />
         <Materials
           materials={shoes.materials}

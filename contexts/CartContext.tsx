@@ -137,7 +137,10 @@ export default function CartProvider({
     updateLocalStorageCart(newCart);
   };
 
-  const totalAmount = cart.reduce((acc, item) => acc + item.price, 0);
+  const totalAmount = cart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   return (
     <cartContext.Provider

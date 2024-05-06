@@ -210,7 +210,7 @@ function Window({
               : "top-0 -translate-y-full"
           } shadow-10 z-[25] overflow-y-auto ${
             className ? className : "rounded-[36px] bg-white"
-          }`}
+          } inline-block z-30`}
           onMouseEnter={() => {
             if (openOnHover) {
               if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
