@@ -25,6 +25,7 @@ type cartContextType = {
   clearCart: () => void;
   addOneQuantity: (name: string, size: string) => void;
   removeOneQuantity: (name: string, size: string) => void;
+  subtotal: number;
   totalAmount: number;
 };
 
@@ -35,6 +36,7 @@ const cartContext = createContext<cartContextType>({
   clearCart() {},
   addOneQuantity() {},
   removeOneQuantity() {},
+  subtotal: 0,
   totalAmount: 0,
 });
 
@@ -137,10 +139,12 @@ export default function CartProvider({
     updateLocalStorageCart(newCart);
   };
 
-  const totalAmount = cart.reduce(
+  const subtotal = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const totalAmount = subtotal;
 
   return (
     <cartContext.Provider
@@ -151,6 +155,7 @@ export default function CartProvider({
         clearCart,
         addOneQuantity,
         removeOneQuantity,
+        subtotal,
         totalAmount,
       }}
     >

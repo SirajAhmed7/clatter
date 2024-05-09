@@ -20,6 +20,16 @@ module.exports = {
         "selected-slider": "0px 16px 40px -4px rgba(43, 85, 87, 0.30)",
         10: "0px 10px 24px -8px rgba(0, 0, 0, 0.10)",
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "33%": { transform: "translateX(-10px)" },
+          "66%": { transform: "translateX(10px)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 0.4s ease-in-out",
+      },
       colors: {
         transparent: "transparent",
         // current: "currentColor",

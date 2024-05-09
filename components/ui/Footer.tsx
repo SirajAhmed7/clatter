@@ -41,7 +41,7 @@ function Footer() {
             Women
           </Link>
           <Link
-            href={"/new-arrivals"}
+            href={"/#new-arrivals"}
             className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
           >
             New arrivals
@@ -52,12 +52,12 @@ function Footer() {
           >
             Cart
           </Link>
-          <Link
+          {/* <Link
             href={"/orders"}
             className="font-display text-neutral-700 hover:opacity-70 active:opacity-70"
           >
             My orders
-          </Link>
+          </Link> */}
         </div>
         {/* <div className="flex flex-col gap-3 col-start-6"> */}
         <div className="flex flex-col gap-3 text-base">
