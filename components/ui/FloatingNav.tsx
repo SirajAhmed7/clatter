@@ -94,8 +94,6 @@ export default function FloatingNav() {
                   Sign up
                 </button>
               </div>
-
-              {/* TAB / MOBILE */}
             </motion.nav>
           </>
         )}

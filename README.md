@@ -5,5 +5,3 @@ Clatter is a forward-thinking sustainable footwear brand that designs and manufa
 ## Live website
 
 https://clatter-five.vercel.app/
-
-### Cart functionality is still in progress...

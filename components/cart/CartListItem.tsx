@@ -32,7 +32,6 @@ function CartListItem({ cartItem }: { cartItem: CartItem }) {
       {/* </div> */}
 
       <div className="space-y-2 md:space-y-6 font-display basis-full py-1 sm:py-4 md:py-6 text-neutral-900">
-        {/* TODO: fix mobile spacing */}
         <div className="flex gap-4 justify-between">
           <div className="sm:space-y-1">
             <Link href={`/shoes/${shoeSlug}`}>
