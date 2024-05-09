@@ -4,24 +4,25 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CartLengthIndicator from "./CartLengthIndicator";
 
 function GlobalCartButton({
   hoverBgColor,
   layoutId,
-  cartLength,
   cartLengthBgColor,
-}: {
+}: // cartLength,
+{
   hoverBgColor: string;
   layoutId: string;
   cartLengthBgColor: string;
-  cartLength: number;
+  // cartLength: number;
 }) {
   const pathname = usePathname();
   const [isHovering, setIsHovering] = useState(false);
   const curPage = pathname === "/cart" ? true : false;
   return (
     <li className="relative">
-      {cartLength > 0 && (
+      {/* {cartLength > 0 && (
         <div
           className={`absolute -top-2 -right-2 h-5 w-5 rounded-full ${cartLengthBgColor} ${
             cartLengthBgColor === "bg-white" ? "text-neutral-900" : "text-white"
@@ -29,7 +30,8 @@ function GlobalCartButton({
         >
           {cartLength}
         </div>
-      )}
+      )} */}
+      <CartLengthIndicator cartLengthBgColor={cartLengthBgColor} />
       <Link
         href={"/cart"}
         className="relative flex justify-center items-center px-8 py-4"

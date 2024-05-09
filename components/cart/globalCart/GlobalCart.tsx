@@ -30,7 +30,7 @@ function GlobalCart({
           }
           // layoutId={yPos === "bottom" ? "navLink" : "floatingNavLink"}
           layoutId={layoutId}
-          cartLength={cart.length}
+          // cartLength={cart.length}
           cartLengthBgColor={
             layoutId === "navLink" ? "bg-white" : "bg-primary-500"
           }
