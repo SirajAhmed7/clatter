@@ -11,6 +11,7 @@ function CartPage() {
       </header>
       <main>
         <CartSection />
+        {/* @ts-expect-error Server Component */}
         <Trending headingLeft />
       </main>
       <Footer />
