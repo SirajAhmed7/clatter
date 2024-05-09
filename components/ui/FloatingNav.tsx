@@ -77,6 +77,7 @@ export default function FloatingNav() {
                     width={40}
                     height={40}
                     alt="Clatter logo"
+                    priority
                   />
                 </Link>
                 <ul className="font-medium p-1 flex bg-[#194759]/10 rounded-2xl">
