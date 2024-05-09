@@ -31,9 +31,10 @@ function CartListItem({ cartItem }: { cartItem: CartItem }) {
       </Link>
       {/* </div> */}
 
-      <div className="space-y-4 md:space-y-6 font-display basis-full py-1 sm:py-4 md:py-6 text-neutral-900">
+      <div className="space-y-2 md:space-y-6 font-display basis-full py-1 sm:py-4 md:py-6 text-neutral-900">
+        {/* TODO: fix mobile spacing */}
         <div className="flex gap-4 justify-between">
-          <div className="space-y-1">
+          <div className="sm:space-y-1">
             <Link href={`/shoes/${shoeSlug}`}>
               <h2 className="text-lg sm:text-xl md:text-[28px] font-medium md:leading-8">
                 {cartItem.name}
@@ -43,7 +44,8 @@ function CartListItem({ cartItem }: { cartItem: CartItem }) {
             <p className="text-sm sm:text-xl text-neutral-800">
               Size: {cartItem.size}
             </p>
-            <div className="block sm:hidden text-2xl md:text-[32px] font-semibold">
+
+            <div className="block sm:hidden text-2xl md:text-[32px] font-semibold mt-1">
               ${cartItem.price}
               {/* <span>|</span> */}
             </div>
@@ -55,7 +57,7 @@ function CartListItem({ cartItem }: { cartItem: CartItem }) {
         </div>
 
         <div className="flex gap-4 justify-between items-center">
-          <div className="flex items-center overflow-hidden gap-2 sm:gap-3 border border-neutral-950 rounded-xl w-min">
+          <div className="flex items-center overflow-hidden gap-2 sm:gap-3 border border-neutral-950 rounded-lg sm:rounded-xl w-min">
             <button
               onClick={() => removeOneQuantity(cartItem.name, cartItem.size)}
               className="px-3 py-2 border-neutral-950"
@@ -77,7 +79,7 @@ function CartListItem({ cartItem }: { cartItem: CartItem }) {
             className="group/remove p-2 transition-all duration-300 rounded-full hover:bg-red-50"
             onClick={() => removeFromCart(cartItem.name, cartItem.size)}
           >
-            <PiTrash className="text-2xl md:text-3xl text-neutral-700 group-hover/remove:text-red-700 transition-colors duration-300" />
+            <PiTrash className="text-2xl md:text-3xl text-neutral-600 group-hover/remove:text-red-700 transition-colors duration-300" />
           </button>
         </div>
       </div>

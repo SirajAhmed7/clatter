@@ -7,6 +7,7 @@ import "./globals.css";
 import { Metadata } from "next";
 import CartProvider from "../contexts/CartContext";
 import ToasterConfig from "../components/ui/ToasterConfig";
+import MobileNav from "../components/ui/MobileNav";
 
 export const metadata: Metadata = {
   title: "Clatter",
@@ -33,6 +34,7 @@ export default function RootLayout({
               {/* {/* <PageTransitionWrapper>{children}</PageTransitionWrapper> */}
               {children}
               <FloatingNav />
+              <MobileNav />
               {/* </div> */}
             </NavProvider>
             <ToasterConfig />

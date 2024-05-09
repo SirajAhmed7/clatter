@@ -5,10 +5,10 @@ import { useNav } from "../../contexts/NavContext";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { PiHouse, PiSneaker, PiHighHeel, PiShoppingCart } from "react-icons/pi";
+// import { PiHouse, PiSneaker, PiHighHeel, PiShoppingCart } from "react-icons/pi";
 import FloatingNavLink from "./FloatingNavLink";
 import GlobalCart from "../cart/globalCart/GlobalCart";
-import CartLengthIndicator from "../cart/globalCart/CartLengthIndicator";
+// import CartLengthIndicator from "../cart/globalCart/CartLengthIndicator";
 
 export default function FloatingNav() {
   const floating = useNav();
@@ -99,42 +99,6 @@ export default function FloatingNav() {
           </>
         )}
       </AnimatePresence>
-      <nav
-        className={`md:hidden fixed text-neutral-900 bottom-4 lg:bottom-10 md:px-4 w-[41rem] left-1/2 -translate-x-1/2 font-display z-50 max-w-[92vw] mx-auto bg-primary-50/[40%] rounded-2xl backdrop-blur-xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.10)]`}
-      >
-        <div className="grid grid-cols-4 justify-between py-2">
-          <Link
-            href={"/"}
-            className="flex flex-col items-center justify-between gap-1"
-          >
-            <PiHouse className="text-2xl" />
-            <p className="text-sm">Home</p>
-          </Link>
-          <Link
-            href={"/shop/men"}
-            className="flex flex-col items-center justify-between gap-1"
-          >
-            <PiSneaker className="text-2xl" />
-            <p className="text-sm">Men</p>
-          </Link>
-          <Link
-            href={"/shop/women"}
-            className="flex flex-col items-center justify-between gap-1"
-          >
-            <PiHighHeel className="text-2xl" />
-            <p className="text-sm">Women</p>
-          </Link>
-          <Link
-            href={"/cart"}
-            className="flex flex-col items-center justify-between gap-1 relative"
-          >
-            {/* TODO: Add cart length to mobile nav */}
-            <CartLengthIndicator cartLengthBgColor="bg-primary-500" />
-            <PiShoppingCart className="text-2xl" />
-            <p className="text-sm">Cart</p>
-          </Link>
-        </div>
-      </nav>
     </>
   );
 }
